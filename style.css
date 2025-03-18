@@ -23,8 +23,6 @@
     z-index: -1;
 }
 
-
-/* สไตล์พื้นฐานสำหรับ Navbar */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -40,13 +38,11 @@ body {
     border-radius: 1rem;
 }
 
-/* โลโก้ */
 .logo {
     font-size: 24px;
     font-weight: bold;
 }
 
-/* เมนู */
 .menu {
     list-style: none;
     display: flex;
@@ -92,13 +88,11 @@ body {
     border-radius: 1rem;
 }
 
-/* โลโก้ */
 .logo {
     font-size: 24px;
     font-weight: bold;
 }
 
-/* เมนู */
 .menu {
     list-style: none;
     display: flex;
@@ -138,7 +132,6 @@ body {
     padding: 0;
 }
 
-/* กล่องข้อมูลส่วนตัว */
 .info-container {
     max-width: 800px;
     margin: 30px auto;
@@ -148,7 +141,6 @@ body {
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
 }
 
-/* กล่องรูปภาพ */
 .gallery-container {
     max-width: 900px;
     margin: 30px auto;
@@ -158,7 +150,6 @@ body {
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
 }
 
-/* หัวข้อ */
 h2 {
     display: inline-block;
     background-color: #3498db;
@@ -168,14 +159,12 @@ h2 {
     font-size: 1.5em;
 }
 
-/* ข้อความ */
 p {
     font-size: 1.1em;
     line-height: 1.6;
     margin: 15px 0;
 }
 
-/* รูปภาพ (Gallery) */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -204,7 +193,6 @@ p {
     text-align: left;
 }
 
-/* หัวข้อ */
 .contact h3 {
     font-size: 1.8em;
     color: #3498db;
@@ -212,7 +200,6 @@ p {
     text-align: left;
 }
 
-/* ข้อความ */
 .contact p {
     font-size: 1.1em;
     margin: 10px 0;
@@ -245,14 +232,12 @@ p {
     }
 }
 
-/* ซ่อนองค์ประกอบไว้ก่อน */
 .hidden {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-/* แสดงเมื่อ Scroll */
 .show {
     opacity: 1;
     transform: translateY(0);
@@ -261,37 +246,57 @@ p {
 
 
 @media screen and (max-width: 768px) {
-    /* ปรับ Navbar ให้แสดงเป็นแนวตั้ง */
     .navbar {
-        flex-direction: column;
-        text-align: center;
+        display: flex;
+        justify-content: space-between; 
+        align-items: center; 
         padding: 15px;
     }
 
-    /* ปรับเมนูให้เรียงแนวตั้ง */
+    .logo {
+        margin-left: 15px;
+        font-weight: bold;
+        font-size: 1.2em;
+        flex: 1; 
+        text-align: left; 
+    }
+
     .menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
         flex-direction: column;
-        gap: 10px;
+        align-items: flex-end; 
+        gap: 10px; 
     }
 
-    /* ปรับ Contact Section ให้ดูดีบนมือถือ */
+    
+    .menu li {
+        display: flex;
+        align-items: center; 
+        gap: 8px; 
+    }
+
+    .menu i {
+        font-size: 1.2em; 
+    }
+    
     .contact {
-        max-width: 90%; /* ให้ขนาดไม่ใหญ่เกินไป */
-        margin: 20px auto; /* จัดให้อยู่กลางบนมือถือ */
+        max-width: 90%; 
+        margin: 20px auto; 
         padding: 15px;
-        text-align: center; /* กลางสำหรับมือถือ เพื่ออ่านง่ายขึ้น */
+        text-align: center; 
     }
 
     .contact h3, .contact p {
-        text-align: center; /* จัดข้อความให้อยู่กลาง */
+        text-align: center; 
     }
-
-    /* ปรับ Gallery ให้มี 2 คอลัมน์แทนที่จะแน่นเกินไป */
+    
     .gallery {
-        grid-template-columns: repeat(2, 1fr); /* 2 รูปต่อแถว */
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    /* Footer ให้ดูดีขึ้นบนมือถือ */
     .footer {
         font-size: 0.9em;
         padding: 10px;
